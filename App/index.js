@@ -1,15 +1,5 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Let's build a Currency Converter from App/index.js</Text>
-      </View>
-    );
-  }
-}
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
@@ -18,4 +8,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
+
+const App = () => (
+  <View style={styles.container}>
+    <Text>Let's build a Currency Converter from App/index.js</Text>
+  </View>
+)
+
+export default App
