@@ -1,6 +1,6 @@
 import React from 'react'
 import EStyleSheet from 'react-native-extended-stylesheet'
-import Home from './Screens/Home'
+import CurrencyList from './Screens/CurrencyList'
 
 // disable yellow warnings
 console.disableYellowBox = true
@@ -13,4 +13,4 @@ EStyleSheet.build({
   $lightGray: '#f0f0f0',
 })
 
-export default () => <Home />
+export default () => <CurrencyList />
