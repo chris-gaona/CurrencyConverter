@@ -2,6 +2,9 @@ import React from 'react'
 import EStyleSheet from 'react-native-extended-stylesheet'
 import Home from './Screens/Home'
 
+// disable yellow warnings
+console.disableYellowBox = true
+
 EStyleSheet.build({
   $primaryBlue: '#4F6D7A',
   $white: '#fff',
