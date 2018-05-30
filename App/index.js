@@ -1,6 +1,8 @@
 import React from 'react'
 import EStyleSheet from 'react-native-extended-stylesheet'
-import CurrencyList from './Screens/CurrencyList'
+// import Home from './Screens/Home'
+// import CurrencyList from './Screens/CurrencyList'
+import Options from './Screens/Options'
 
 // disable yellow warnings
 console.disableYellowBox = true
@@ -14,4 +16,4 @@ EStyleSheet.build({
   $darkText: '#343434',
 })
 
-export default () => <CurrencyList />
+export default () => <Options />
