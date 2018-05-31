@@ -3,7 +3,9 @@ import EStyleSheet from 'react-native-extended-stylesheet'
 // import Home from './Screens/Home'
 // import CurrencyList from './Screens/CurrencyList'
 // import Options from './Screens/Options'
-import Themes from './Screens/Themes'
+// import Themes from './Screens/Themes'
+
+import Navigator from './Config/routes'
 
 // disable yellow warnings
 console.disableYellowBox = true
@@ -13,6 +15,7 @@ EStyleSheet.build({
   $primaryOrange: '#D57866',
   $primaryGreen: '#00BD9D',
   $primaryPurple: '#9E768F',
+
   $white: '#fff',
   $border: '#e2e2e2',
   $inputText: '#797979',
@@ -20,4 +23,4 @@ EStyleSheet.build({
   $darkText: '#343434',
 })
 
-export default () => <Themes />
+export default () => <Navigator />
