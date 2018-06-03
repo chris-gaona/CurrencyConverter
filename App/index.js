@@ -6,6 +6,7 @@ import EStyleSheet from 'react-native-extended-stylesheet'
 // import Themes from './Screens/Themes'
 
 import Navigator from './Config/routes'
+import { AlertProvider } from './Components/Alert'
 
 // disable yellow warnings
 console.disableYellowBox = true
@@ -23,4 +24,8 @@ EStyleSheet.build({
   $darkText: '#343434',
 })
 
-export default () => <Navigator />
+export default () => (
+  <AlertProvider>
+    <Navigator />
+  </AlertProvider>
+)
