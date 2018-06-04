@@ -1,12 +1,12 @@
 import React from 'react'
 import EStyleSheet from 'react-native-extended-stylesheet'
 import { Provider } from 'react-redux'
+import { AlertProvider } from './Components/Alert'
 // import Home from './Screens/Home'
 // import CurrencyList from './Screens/CurrencyList'
 // import Options from './Screens/Options'
 // import Themes from './Screens/Themes'
 import Navigator from './Config/routes'
-import { AlertProvider } from './Components/Alert'
 import store from './Config/store'
 
 // disable yellow warnings
