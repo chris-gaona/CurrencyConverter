@@ -6,8 +6,6 @@ import { ListItem, Separator } from '../Components/List'
 import currenices from '../Data/currencies'
 import { changeBaseCurrency, changeQuoteCurrency } from '../actions/currencies'
 
-const TEMP_CURRENT_CURRENCY = 'CAD'
-
 class CurrencyList extends Component {
   static propTypes = {
     navigation: PropTypes.object,
