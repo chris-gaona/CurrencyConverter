@@ -1,15 +1,22 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-type'
 import { View, Text, Keyboard, Animated, Platform, StyleSheet } from 'react-native'
 import styles from './styles'
 
 const ANIMATION_DURATION = 250
 
 class Logo extends Component {
+  static propTypes = {
+    tintColor: PropTypes.string,
+  }
+
   constructor(props) {
     super(props)
 
-    this.containerImageWidth = new Animated.Value(styles.$largeContainerSize)
-    this.imageWidth = new Animated.Value(styles.$largeImageSize)
+    this.state = {
+      containerImageWidth: new Animated.Value(styles.$largeContainerSize),
+      imageWidth: new Animated.Value(styles.$largeImageSize),
+    }
   }
   componentDidMount() {
     // keyboardWillShow & keyboardWillHide listeners don't work on Android
@@ -32,7 +39,7 @@ class Logo extends Component {
 
   keyboardShow = () => {
     Animated.parallel([
-      Animated.timing(this.containerImageWidth, {
+      Animated.timing(this.state.containerImageWidth, {
         toValue: styles.$smallContainerSize,
         duration: ANIMATION_DURATION,
       }),
@@ -45,7 +52,7 @@ class Logo extends Component {
 
   keyboardHide = () => {
     Animated.parallel([
-      Animated.timing(this.containerImageWidth, {
+      Animated.timing(this.state.containerImageWidth, {
         toValue: styles.$largeContainerSize,
         duration: ANIMATION_DURATION,
       }),
@@ -59,10 +66,14 @@ class Logo extends Component {
   render() {
     const containerImageStyle = [
       styles.containerImage,
-      { width: this.containerImageWidth, height: this.containerImageWidth },
+      { width: this.state.containerImageWidth, height: this.state.containerImageWidth },
     ]
 
-    const imageStyle = [styles.logo, { width: this.imageWidth }]
+    const imageStyles = [
+      styles.logo,
+      { width: this.state.imageWidth },
+      this.props.tintColor ? { tintColor: this.props.tintColor } : null,
+    ]
 
     return (
       <View style={styles.container}>
@@ -74,7 +85,7 @@ class Logo extends Component {
           />
           <Animated.Image
             resizeMode="contain"
-            style={imageStyle}
+            style={imageStyles}
             source={require('./images/logo.png')}
           />
         </Animated.View>
