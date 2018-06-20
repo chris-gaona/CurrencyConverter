@@ -8,7 +8,7 @@ import { InputWithButton } from '../Components/TextInput'
 import { ClearButton } from '../Components/Buttons'
 import { LastConverted } from '../Components/Text'
 import { Header } from '../Components/Header'
-import { swapCurrency, changeCurrencyAmount } from '../actions/currencies'
+import { swapCurrency, changeCurrencyAmount, getInitialConversion } from '../actions/currencies'
 
 class Home extends Component {
   static propTypes = {
@@ -21,6 +21,10 @@ class Home extends Component {
     isFetching: PropTypes.bool,
     lastConvertedDate: PropTypes.object,
     primaryColor: PropTypes.string,
+  }
+
+  componentWillMount() {
+    this.props.dispatch(getInitialConversion())
   }
 
   handlePressBaseCurrency = () => {
