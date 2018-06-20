@@ -14,4 +14,6 @@ function* fetchLatestConversionRates(action) {
 export default function* rootSaga() {
   // yield tells generator to pause
   yield takeEvery(GET_INITIAL_CONVERSION, fetchLatestConversionRates)
+  yield takeEvery(SWAP_CURRENCY, fetchLatestConversionRates)
+  yield takeEvery(CHANGE_BASE_CURRENCY, fetchLatestConversionRates)
 }
