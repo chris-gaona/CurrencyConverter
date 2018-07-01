@@ -43,7 +43,7 @@ class Logo extends Component {
         toValue: styles.$smallContainerSize,
         duration: ANIMATION_DURATION,
       }),
-      Animated.timing(this.imageWidth, {
+      Animated.timing(this.state.imageWidth, {
         toValue: styles.$smallImageSize,
         duration: ANIMATION_DURATION,
       }),
@@ -56,7 +56,7 @@ class Logo extends Component {
         toValue: styles.$largeContainerSize,
         duration: ANIMATION_DURATION,
       }),
-      Animated.timing(this.imageWidth, {
+      Animated.timing(this.state.imageWidth, {
         toValue: styles.$largeImageSize,
         duration: ANIMATION_DURATION,
       }),

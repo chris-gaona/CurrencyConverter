@@ -8,7 +8,8 @@ import styles from './styles'
 const InputWithButton = (props) => {
   const { onPress, buttonText, editable = true } = props
 
-  const underlayColor = color(styles.$buttonBackgroundColorBase).darken(styles.$buttonBackgroundColorModifier)
+  const backgroundColorBase = color(styles.$buttonBackgroundColorBase)
+  const underlayColor = backgroundColorBase.darken(styles.$buttonBackgroundColorModifier)
 
   const containerStyles = [styles.container]
 

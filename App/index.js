@@ -10,7 +10,7 @@ import Navigator from './Config/routes'
 import store from './Config/store'
 
 // disable yellow warnings
-console.disableYellowBox = true
+// console.disableYellowBox = true
 
 EStyleSheet.build({
   $primaryBlue: '#4F6D7A',
